@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# RAG Knowledge Assistant — HPS Frontend 🤖
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based frontend for an AI-powered internal knowledge assistant 
+built during my internship at **HPS (Hightech Payment Systems)**.
 
-## Available Scripts
+## What It Does
 
-In the project directory, you can run:
+Provides a clean chat interface for employees to query internal 
+documentation using a Retrieval-Augmented Generation (RAG) system. 
+Instead of searching through manuals manually, employees ask questions 
+in natural language and get instant, accurate answers sourced from 
+internal documents.
 
-### `npm start`
+## Architecture
+User (React UI)  →  FastAPI Backend  →  Ollama (LLM)
+↓
+Vector Database
+(Document Embeddings)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Frontend (this repo)**
+- React.js
+- JavaScript / CSS
+- REST API integration
 
-### `npm test`
+**Backend (separate repo)**
+- FastAPI
+- Ollama (local LLM)
+- Docker
+- Python
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+### Prerequisites
+- Node.js 16+
+- Backend service running (FastAPI + Ollama)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+# Clone the repo
+git clone https://github.com/mamdouh-abdelmoughit/RAG_hps.git
+cd RAG_hps
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Install dependencies
+npm install
 
-### `npm run eject`
+# Start development server
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Open [http://localhost:3000](http://localhost:3000) to view in browser.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Build for Production
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm run build
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Context
 
-## Learn More
+Built as part of my end-of-study internship at HPS to solve a real 
+internal problem: engineers spending too much time searching through 
+technical documentation. The RAG system indexes internal docs and 
+makes them queryable through a simple chat interface.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Related
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Backend repo: *(link to FastAPI backend if available)*
+- [BioSwitch — Biometric Payment System](https://github.com/mamdouh-abdelmoughit/bioswitch)
+- [Click-to-Pay Solution](https://github.com/mamdouh-abdelmoughit/clicktopay)
