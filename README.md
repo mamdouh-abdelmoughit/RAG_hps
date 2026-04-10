@@ -66,7 +66,5 @@ technical documentation. The RAG system indexes internal docs and
 makes them queryable through a simple chat interface.
 
 ## Related
-
-- Backend repo: *(link to FastAPI backend if available)*
 - [BioSwitch — Biometric Payment System](https://github.com/mamdouh-abdelmoughit/bioswitch)
 - [Click-to-Pay Solution](https://github.com/mamdouh-abdelmoughit/clicktopay)
